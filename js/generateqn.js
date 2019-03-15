@@ -31,21 +31,25 @@ var questionGenerate = document.getElementById("qn-generates");
 	var difficulty1RestrictData = [];
 
 	for(jx2=0;jx2<fetchDifficultyQn1.length;jx2++){ 
-		 if((sum(difficulty1RestrictMarks)) <= givenDifficultyMark ){
+		 
 		 difficulty1RestrictData.push(fetchDifficultyQn1[jx2]);
 		 difficulty1RestrictMarks.push(fetchDifficultyQn1[jx2]['qnMark']);
-		}
+		 
 		
 	}	
-
-	console.log(difficulty1RestrictData);
+ 
 	
-	//console.log(fetchDifficultyQn1);
+	 
 	var list = document.getElementById('qnlist'); 
 
+	var generatedData = [];
+
 	for(kx1=0;kx1<difficulty1RestrictData.length;kx1++){ 	
-			 
-		list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		generatedData.push(fetchDifficultyQn1[kx1]['qnMark']);
+		
+		if(sum(generatedData) <= givenDifficultyMark){	 
+			list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		}
 	}
 	
 
@@ -76,14 +80,19 @@ var questionGenerate = document.getElementById("qn-generates");
 
 	console.log(difficulty1RestrictData);
 	
-	//console.log(fetchDifficultyQn1);
 	var list = document.getElementById('qnlist'); 
 
+	var generatedData = [];
+
 	for(kx1=0;kx1<difficulty1RestrictData.length;kx1++){ 	
-			 
-		list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		generatedData.push(fetchDifficultyQn1[kx1]['qnMark']);
+		
+		if(sum(generatedData) <= givenDifficultyMark){	 
+			list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		}
 	}
 	
+
 
  }
 
@@ -111,14 +120,19 @@ var questionGenerate = document.getElementById("qn-generates");
 
 	console.log(difficulty1RestrictData);
 	
-	//console.log(fetchDifficultyQn1);
 	var list = document.getElementById('qnlist'); 
 
+	var generatedData = [];
+
 	for(kx1=0;kx1<difficulty1RestrictData.length;kx1++){ 	
-			 
-		list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		generatedData.push(fetchDifficultyQn1[kx1]['qnMark']);
+		
+		if(sum(generatedData) <= givenDifficultyMark){	 
+			list.innerHTML += "<h4>"+fetchDifficultyQn1[kx1]['qnText']+"</h4><p>"+fetchDifficultyQn1[kx1]['qnTopic']+"</p><p>Mark :"+fetchDifficultyQn1[kx1]['qnMark']+" | Subject :"+fetchDifficultyQn1[kx1]['qnSubject']+" | Difficulty :"+fetchDifficultyQn1[kx1]['qnDifficulty']+"</p><br><hr>";
+		}
 	}
 	
+
 
  }
 

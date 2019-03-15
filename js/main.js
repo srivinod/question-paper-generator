@@ -1,7 +1,5 @@
 var questionAddButton = document.getElementById("add-qn-btn"); 
  
-
-
 var addQuestion = function(){
 	  
 	var questionText = document.getElementById("text");
@@ -18,8 +16,7 @@ var addQuestion = function(){
 
 
 	tableCreate();
-
-
+ 
  	//Reset the fields
 	questionText.value = "";
 	questionSubject.value = "";
@@ -39,9 +36,7 @@ var createpersonList = function(qnText,qnSubject,qnTopic,qnDifficulty,qnMark){
 	// chkStorageText.push(qnText);
 	// localStorage.setItem('qnText', JSON.stringify(chkStorageText));
 
-	
- 
-
+	 
 	var chkStorageText = localStorage.getItem('appObjects');
 	chkStorageText = chkStorageText ? JSON.parse(chkStorageText): [];
 	chkStorageText.push({ 
@@ -59,10 +54,7 @@ var createpersonList = function(qnText,qnSubject,qnTopic,qnDifficulty,qnMark){
 	//var retrievedObject = localStorage.getItem('appObjects');
 
 	//console.log('retrievedObject: ', JSON.parse(retrievedObject));							
-
-
-
-
+ 
 	// var chkStorageSubject = localStorage.getItem('qnSubject');
 	// chkStorageSubject = chkStorageSubject ? JSON.parse(chkStorageSubject): [];
 	// chkStorageSubject.push(qnSubject);
@@ -90,7 +82,7 @@ function tableCreate(){
 	document.getElementById("qnBank").style.display="block";
 	var table = document.getElementById("mytab1"); 
 	table.innerHTML = "";
-	
+
 	for (i=0;i< JSON.parse( localStorage.getItem("appObjects")).length;i++){
  
 	var row = table.insertRow(0);
